@@ -107,7 +107,3 @@ The app uses SQLite by default for easy testing. A MySQL schema is provided in `
 - Low attendance alerts
 - Docker deployment
 - Cloud database integration
-
-## Project Impact
-
-This project demonstrates backend development, computer vision, database management, authentication, reporting, and dashboard design. It is suitable for fresher portfolios targeting Software Engineer, Python Developer, Backend Developer and AI/ML Intern roles.
