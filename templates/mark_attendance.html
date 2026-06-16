@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mark Attendance</h1>
+<p>Upload a clear face image. The app compares it with registered student face images.</p>
+<form method="post" enctype="multipart/form-data" class="form-card">
+    <label>Capture / Upload Face Image</label>
+    <input type="file" name="capture_image" accept="image/*" required>
+    <button type="submit">Mark Attendance</button>
+</form>
+{% endblock %}

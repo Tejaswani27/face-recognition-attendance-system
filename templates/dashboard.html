@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Dashboard</h1>
+<div class="cards">
+    <div class="card"><h3>Total Students</h3><p>{{ total_students }}</p></div>
+    <div class="card"><h3>Today's Attendance</h3><p>{{ today_count }}</p></div>
+    <div class="card"><h3>Total Records</h3><p>{{ total_attendance }}</p></div>
+</div>
+<h2>Recent Attendance</h2>
+<table>
+<tr><th>Roll No</th><th>Name</th><th>Date</th><th>Time</th><th>Status</th></tr>
+{% for r in recent %}
+<tr><td>{{ r.roll_no }}</td><td>{{ r.name }}</td><td>{{ r.attendance_date }}</td><td>{{ r.attendance_time }}</td><td>{{ r.status }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

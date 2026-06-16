@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Register Student</h1>
+<form method="post" enctype="multipart/form-data" class="form-card">
+    <label>Roll Number</label><input name="roll_no" required>
+    <label>Name</label><input name="name" required>
+    <label>Email</label><input type="email" name="email">
+    <label>Department</label><input name="department">
+    <label>Face Image</label><input type="file" name="face_image" accept="image/*" required>
+    <button type="submit">Register Student</button>
+</form>
+{% endblock %}

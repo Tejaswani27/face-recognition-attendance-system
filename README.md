@@ -1,55 +1,44 @@
 # Face Recognition Attendance System 2.0
 
-A full-stack attendance management system that uses face recognition to mark student attendance automatically. Built with Python, Flask, OpenCV, SQLite/MySQL-ready schema, role-based login, dashboard, reports, CSV export, and optional email notifications.
+A full-stack attendance management system built using **Python, Flask, OpenCV and SQLite/MySQL**. It allows admins to register students with face images, mark attendance using face recognition, view attendance dashboards, filter reports, export CSV files and send email notifications.
 
 ## Features
 
-- Admin, faculty, and student login roles
-- Student registration
-- Webcam-based face sample capture
-- OpenCV LBPH face recognition model training
-- Live face recognition attendance marking
-- One attendance entry per student per day
-- Dashboard with total students and attendance count
+- Admin login system
+- Student registration with face image
+- Face detection using OpenCV Haar Cascade
+- Face-based attendance marking
+- Dashboard with attendance statistics
 - Date-wise attendance reports
 - CSV export
-- Optional email notification after attendance is marked
-- SQLite database by default
-- MySQL schema included in `database.sql`
+- Email notification support using SMTP
+- SQLite by default, MySQL schema included
+- Clean Flask folder structure
 
 ## Tech Stack
 
 - Python
 - Flask
 - OpenCV
-- SQLite / MySQL schema
+- SQLite / MySQL
 - HTML
 - CSS
-- Pandas
+- JavaScript
 
-## Project Structure
+## Folder Structure
 
 ```text
-Face-Recognition-Attendance-System/
+Face-Recognition-Attendance-System-Complete/
 ├── app.py
 ├── requirements.txt
 ├── database.sql
 ├── README.md
-├── utils/
-│   ├── database.py
-│   ├── face_utils.py
-│   └── email_alert.py
 ├── templates/
-│   ├── base.html
-│   ├── login.html
-│   ├── dashboard.html
-│   ├── students.html
-│   ├── add_student.html
-│   ├── recognize.html
-│   └── reports.html
-├── static/css/style.css
-├── dataset/student_faces/
-└── encodings/
+├── static/
+├── utils/
+├── dataset/
+├── encodings/
+└── exports/
 ```
 
 ## How to Run
@@ -57,43 +46,30 @@ Face-Recognition-Attendance-System/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/Face-Recognition-Attendance-System.git
-cd Face-Recognition-Attendance-System
+git clone https://github.com/your-username/face-recognition-attendance-system.git
+cd face-recognition-attendance-system
 ```
 
 ### 2. Create virtual environment
 
 ```bash
 python -m venv venv
-```
-
-### 3. Activate virtual environment
-
-Windows:
-
-```bash
 venv\Scripts\activate
 ```
 
-Mac/Linux:
-
-```bash
-source venv/bin/activate
-```
-
-### 4. Install dependencies
+### 3. Install requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Run the Flask app
+### 4. Run the Flask app
 
 ```bash
 python app.py
 ```
 
-Open browser:
+Open in browser:
 
 ```text
 http://127.0.0.1:5000
@@ -106,19 +82,9 @@ Username: admin
 Password: admin123
 ```
 
-## Usage Flow
+## Email Notification Setup
 
-1. Login as admin.
-2. Add a student.
-3. The webcam opens automatically to capture face samples.
-4. Click **Train Model**.
-5. Click **Recognize** to start live face recognition.
-6. Attendance will be marked automatically.
-7. Go to **Reports** to view or export attendance.
-
-## Optional Email Setup
-
-Create a `.env` file or set these environment variables:
+Create a `.env` file or set environment variables:
 
 ```text
 SMTP_HOST=smtp.gmail.com
@@ -127,22 +93,21 @@ SMTP_USER=your_email@gmail.com
 SMTP_PASSWORD=your_app_password
 ```
 
-For Gmail, use an App Password instead of your normal password.
+Email sending is optional. The app still works without SMTP configuration.
 
-## GitHub Repository Description
+## MySQL Support
 
-```text
-A Python Flask and OpenCV based Face Recognition Attendance System with role-based login, dashboard, reports, CSV export, and email notifications.
-```
+The app uses SQLite by default for easy testing. A MySQL schema is provided in `database.sql`.
 
 ## Future Enhancements
 
-- MySQL integration in app runtime
-- Student-wise monthly analytics charts
-- Low attendance alert system
-- REST API for mobile app integration
-- Deployment using Docker
+- Live webcam attendance capture
+- Role-based faculty/student dashboards
+- Monthly analytics charts
+- Low attendance alerts
+- Docker deployment
+- Cloud database integration
 
-## Author
+## Project Impact
 
-Developed as a portfolio project for Python, Flask, OpenCV, SQL, and backend development practice.
+This project demonstrates backend development, computer vision, database management, authentication, reporting, and dashboard design. It is suitable for fresher portfolios targeting Software Engineer, Python Developer, Backend Developer and AI/ML Intern roles.

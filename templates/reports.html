@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Attendance Reports</h1>
+<form method="get" class="filter-form">
+    <input type="date" name="date" value="{{ filter_date }}">
+    <button type="submit">Filter</button>
+    <a class="button" href="{{ url_for('export_csv') }}">Export CSV</a>
+</form>
+<table>
+<tr><th>Roll No</th><th>Name</th><th>Department</th><th>Date</th><th>Time</th><th>Status</th></tr>
+{% for r in records %}
+<tr><td>{{ r.roll_no }}</td><td>{{ r.name }}</td><td>{{ r.department }}</td><td>{{ r.attendance_date }}</td><td>{{ r.attendance_time }}</td><td>{{ r.status }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}
