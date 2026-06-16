@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+attendance.db
+encodings/*.yml
+encodings/*.pkl
+dataset/student_faces/*
+!dataset/student_faces/.gitkeep
